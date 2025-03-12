@@ -2,8 +2,10 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Login extends JFrame {
+public class Login extends JFrame implements ActionListener {
 
     JLabel title, cardNumber, pin;
     JTextField insertCardNumber;
@@ -52,18 +54,21 @@ public class Login extends JFrame {
         signIn.setForeground(Color.BLACK);
         signIn.setBounds(250, 305, 100, 30);
         signIn.setFont(new Font("Arial", Font.BOLD, 14));
+        signIn.addActionListener(this);
         add(signIn);
 
         clear = new JButton("CLEAR");
         clear.setForeground(Color.BLACK);
         clear.setBounds(380, 305, 100, 30);
         clear.setFont(new Font("Arial", Font.BOLD, 14));
+        clear.addActionListener(this);
         add(clear);
 
         signUp = new JButton("SIGN UP");
         signUp.setForeground(Color.BLACK);
         signUp.setBounds(250, 355, 230, 30);
         signUp.setFont(new Font("Arial", Font.BOLD, 14));
+        signUp.addActionListener(this);
         add(signUp);
 
         ImageIcon bank1 = new ImageIcon(ClassLoader.getSystemResource("icon/bankbg.jpg"));
@@ -77,6 +82,25 @@ public class Login extends JFrame {
         setSize(736, 582);
         setLocation(450, 200);
         setVisible(true);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        try {
+            if (e.getSource() == signIn) {
+                // insert logic
+            } else if (e.getSource() == clear) {
+                insertCardNumber.setText("");
+                insertPin.setText("");
+            } else if (e.getSource() == signUp) {
+                // insert logic
+            }
+
+        } catch (Exception E) {
+            E.printStackTrace();
+        }
 
     }
 
