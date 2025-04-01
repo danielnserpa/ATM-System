@@ -7,12 +7,13 @@ import java.awt.event.ActionListener;
 
 public class Login extends JFrame implements ActionListener {
 
-    JLabel title, cardNumber, pin;
-    JTextField insertCardNumber;
-    JPasswordField insertPin;
-    JButton signIn, clear, signUp;
+    JLabel labelLogInTitle, labelCardNumber, labelPin;
+    JTextField textInsertCardNumber;
+    JPasswordField passwordInsertPin;
+    JButton buttonSignIn, buttonClear, buttonSignUp;
 
-    Login(){
+    Login() {
+
         super("ATM System");
 
         ImageIcon card1 = new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));
@@ -22,54 +23,54 @@ public class Login extends JFrame implements ActionListener {
         cardimage.setBounds(318, 10, 100, 100);
         add(cardimage);
 
-        title = new JLabel("WELCOME TO THE ATM SYSTEM");
-        title.setForeground(Color.WHITE);
-        title.setFont(new Font("AvantGarde", Font.BOLD, 23));
-        title.setBounds(185, 125, 450, 40);
-        add(title);
+        labelLogInTitle = new JLabel("WELCOME TO THE ATM SYSTEM");
+        labelLogInTitle.setForeground(Color.WHITE);
+        labelLogInTitle.setFont(new Font("AvantGarde", Font.BOLD, 23));
+        labelLogInTitle.setBounds(185, 125, 450, 40);
+        add(labelLogInTitle);
 
-        cardNumber = new JLabel("Card No: ");
-        cardNumber.setForeground(Color.WHITE);
-        cardNumber.setFont(new Font("Ralway", Font.BOLD, 18));
-        cardNumber.setBounds(185, 190, 375, 30);
-        add(cardNumber);
+        labelCardNumber = new JLabel("Card No: ");
+        labelCardNumber.setForeground(Color.WHITE);
+        labelCardNumber.setFont(new Font("Ralway", Font.BOLD, 18));
+        labelCardNumber.setBounds(185, 190, 375, 30);
+        add(labelCardNumber);
 
-        pin = new JLabel("PIN: ");
-        pin.setForeground(Color.WHITE);
-        pin.setFont(new Font("Ralway", Font.BOLD, 18));
-        pin.setBounds(185, 250, 375, 30);
-        add(pin);
+        labelPin = new JLabel("PIN: ");
+        labelPin.setForeground(Color.WHITE);
+        labelPin.setFont(new Font("Ralway", Font.BOLD, 18));
+        labelPin.setBounds(185, 250, 375, 30);
+        add(labelPin);
 
-        insertCardNumber = new JTextField(15);
-        insertCardNumber.setBounds(318, 190, 230, 30);
-        insertCardNumber.setFont(new Font("Arial", Font.BOLD, 14));
-        add(insertCardNumber);
+        textInsertCardNumber = new JTextField(15);
+        textInsertCardNumber.setBounds(318, 190, 230, 30);
+        textInsertCardNumber.setFont(new Font("Arial", Font.BOLD, 14));
+        add(textInsertCardNumber);
 
-        insertPin = new JPasswordField(15);
-        insertPin.setBounds(318, 250, 230, 30);
-        insertPin.setFont(new Font("Arial", Font.BOLD, 14));
-        add(insertPin);
+        passwordInsertPin = new JPasswordField(15);
+        passwordInsertPin.setBounds(318, 250, 230, 30);
+        passwordInsertPin.setFont(new Font("Arial", Font.BOLD, 14));
+        add(passwordInsertPin);
 
-        signIn = new JButton("SIGN IN");
-        signIn.setForeground(Color.BLACK);
-        signIn.setBounds(250, 305, 100, 30);
-        signIn.setFont(new Font("Arial", Font.BOLD, 14));
-        signIn.addActionListener(this);
-        add(signIn);
+        buttonSignIn = new JButton("SIGN IN");
+        buttonSignIn.setForeground(Color.BLACK);
+        buttonSignIn.setBounds(250, 305, 100, 30);
+        buttonSignIn.setFont(new Font("Arial", Font.BOLD, 14));
+        buttonSignIn.addActionListener(this);
+        add(buttonSignIn);
 
-        clear = new JButton("CLEAR");
-        clear.setForeground(Color.BLACK);
-        clear.setBounds(380, 305, 100, 30);
-        clear.setFont(new Font("Arial", Font.BOLD, 14));
-        clear.addActionListener(this);
-        add(clear);
+        buttonClear = new JButton("CLEAR");
+        buttonClear.setForeground(Color.BLACK);
+        buttonClear.setBounds(380, 305, 100, 30);
+        buttonClear.setFont(new Font("Arial", Font.BOLD, 14));
+        buttonClear.addActionListener(this);
+        add(buttonClear);
 
-        signUp = new JButton("SIGN UP");
-        signUp.setForeground(Color.BLACK);
-        signUp.setBounds(250, 355, 230, 30);
-        signUp.setFont(new Font("Arial", Font.BOLD, 14));
-        signUp.addActionListener(this);
-        add(signUp);
+        buttonSignUp = new JButton("SIGN UP");
+        buttonSignUp.setForeground(Color.BLACK);
+        buttonSignUp.setBounds(250, 355, 230, 30);
+        buttonSignUp.setFont(new Font("Arial", Font.BOLD, 14));
+        buttonSignUp.addActionListener(this);
+        add(buttonSignUp);
 
         ImageIcon bank1 = new ImageIcon(ClassLoader.getSystemResource("icon/bankbg.jpg"));
         Image bank2 = bank1.getImage().getScaledInstance(736, 582, Image.SCALE_DEFAULT);
@@ -89,12 +90,12 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         try {
-            if (e.getSource() == signIn) {
+            if (e.getSource() == buttonSignIn) {
                 // insert logic
-            } else if (e.getSource() == clear) {
-                insertCardNumber.setText("");
-                insertPin.setText("");
-            } else if (e.getSource() == signUp) {
+            } else if (e.getSource() == buttonClear) {
+                textInsertCardNumber.setText("");
+                passwordInsertPin.setText("");
+            } else if (e.getSource() == buttonSignUp) {
                 // insert logic
             }
 
