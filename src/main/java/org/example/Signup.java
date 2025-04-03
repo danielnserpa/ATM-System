@@ -2,15 +2,14 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
-import java.time.chrono.JapaneseDate;
 import java.util.Random;
+import com.toedter.calendar.JDateChooser;
 
 public class Signup extends JFrame {
 
     JLabel signUpTitle, personalDetails, labelFirstName, labelLastName, labelDOB;
     JTextField textFirstName, textLastName;
-
-    JapaneseDate;
+    JDateChooser chooseDate;
 
     Signup() {
         super ("APPLICATION FORM");
@@ -59,6 +58,11 @@ public class Signup extends JFrame {
         labelDOB.setFont(new Font("Raleway", Font.BOLD, 20));
         labelDOB.setBounds(185, 290, 200, 30);
         add(labelDOB);
+
+        chooseDate = new JDateChooser();
+        chooseDate.setForeground(new Color(105, 105, 105));
+        chooseDate.setBounds(340, 290,370, 30);
+        add(chooseDate);
 
 
 
