@@ -7,7 +7,7 @@ import com.toedter.calendar.JDateChooser;
 
 public class Signup extends JFrame {
 
-    JLabel signUpTitle, personalDetails, labelFirstName, labelLastName, labelDOB;
+    JLabel signUpTitle, personalDetails, labelFirstName, labelLastName, labelDOB, labelGender;
     JTextField textFirstName, textLastName;
     JDateChooser chooseDate;
 
@@ -63,6 +63,11 @@ public class Signup extends JFrame {
         chooseDate.setForeground(new Color(105, 105, 105));
         chooseDate.setBounds(340, 290,370, 30);
         add(chooseDate);
+
+        labelGender = new JLabel("Gender: ");
+        labelGender.setFont(new Font("Raleway", Font.BOLD, 20));
+        labelGender.setBounds(185, 340, 200, 30);
+        add(labelGender);
 
 
 
