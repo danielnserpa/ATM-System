@@ -2,12 +2,15 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.chrono.JapaneseDate;
 import java.util.Random;
 
 public class Signup extends JFrame {
 
     JLabel signUpTitle, personalDetails, labelFirstName, labelLastName, labelDOB;
     JTextField textFirstName, textLastName;
+
+    JapaneseDate;
 
     Signup() {
         super ("APPLICATION FORM");
